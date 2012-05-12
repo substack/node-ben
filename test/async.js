@@ -8,8 +8,9 @@ test('async', function (t) {
     
     t.plan(2);
     ben.async(100, test, function (ms) {
+      console.log(ms);
         t.ok(ms >= 10);
-        t.ok(ms < 11);
+        t.ok(ms < 12);
         t.end();
     });
 });
